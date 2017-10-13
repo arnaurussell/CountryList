@@ -1,0 +1,27 @@
+package edu.upc.eseiaat.pma.countrylistarnau;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CountryListArnauActivity extends AppCompatActivity {
+
+    private ArrayList<String> country_list;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_country_list_arnau);
+
+        String[] countries = getResources().getStringArray(R.array.countries);
+        country_list = new ArrayList<>(Arrays.asList(countries));
+
+        ListView list = (ListView) findViewById(R.id.country_list);
+
+
+    }
+}
